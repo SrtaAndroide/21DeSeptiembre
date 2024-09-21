@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramo de Flores Amarillas</title>
+    <style>
+        body {
+            background-color: #f7f7f7;
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            padding: 50px;
+        }
+        h1 {
+            font-family: 'Lucida Handwriting', cursive;
+            color: #ffa500;
+            font-size: 48px;
+        }
+        p {
+            font-size: 24px;
+            color: #333;
+        }
+        button {
+            background-color: #ffcc00;
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        button:hover {
+            background-color: #ff9933;
+        }
+        #flor-container {
+            animation: fadeIn 2s ease-in-out;
+            display: flex;
+            justify-content: center; /* Centrar el video horizontalmente */
+            align-items: center; /* Centrar verticalmente */
+            height: 400px; /* Altura para centrar verticalmente */
+        }
+        video {
+            width: 800px; /* Ajusta el ancho del video */
+            height: auto; /* Mantener la proporción */
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Feliz Día de las Flores Amarillas!</h1>
+    <p>Nunca Espectadora siempre protagonista bb! ❤️ Te amo infinito!!!</p>
+
+    <button onclick="mostrarRamo()">Obtener mi regalo</button>
+
+    <div id="flor-container">
+        <video id="flor-video" controls style="display:none;">
+            <source src="flor_amarillamovie.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <script>
+        function mostrarRamo() {
+            var video = document.getElementById('flor-video');
+            video.style.display = 'block';  // Mostrar video cuando se presione el botón
+            video.play(); // Reproducir el video automáticamente
+        }
+    </script>
+
+</body>
+</html>
